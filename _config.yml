@@ -6,13 +6,13 @@
 name: Repository of Myself
 
 # Name of the author
-author: iisan
+author: Amit Merchant
 
 # Short bio or description (displayed in the header)
 description: for anything so long as it feels
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: images/7095416.png
+avatar: /images/7095416.png
 
 #
 # Flags below are optional
@@ -21,14 +21,14 @@ avatar: images/7095416.png
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: 
   facebook:
   flickr:
-  github:
+  github: 
   instagram:
   linkedin: 
   pinterest:
-  rss: 
+  rss:
   twitter:
   stackoverflow: 
   youtube: # channel/<your_long_string> or user/<user-name>
@@ -52,7 +52,7 @@ enforce_ssl: y-san-evi.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl:
+baseurl: 
 
 #
 # !! You don't need to change any of the configuration flags below !!
