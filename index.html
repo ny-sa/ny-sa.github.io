@@ -1,49 +1,43 @@
 ---
 layout: default
+title: Homepage
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div>
-        <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
-      </div>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="/">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
+<div id="home">
+  <ul class="posts">
+    {% for post in paginator.posts %}
+    <li itemscope itemtype="http://schema.org/BlogPosting">
+      <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
+        <div class="p-wrap">
+          <article class="inner">
+            <time datetime="{{ post.date | date_to_xmlschema }}"
+                itemprop="datePublished">
+              {{ post.date | date_to_string }}
+            </time>
+            <p itemprop="name headline">{{ post.title }}</p>
+          </article>
+        </div>
+      </a>
+    </li>
     {% endfor %}
+  </ul>
+</div>
 
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.next_page %}
+  <a href="{{ site.baseurl }}/page/{{paginator.next_page}}" class="older">Older</a>
+  {% else %}
+  <span class="next">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+    <a href="{{ site.baseurl }}/" class="newer">Newer</a>
     {% else %}
-      <span>Next &raquo;</span>
+    <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="newer">Newer</a>
     {% endif %}
-  </div>
+  {% else %}
+  <span class="previous">Newer</span>
   {% endif %}
 </div>
+{% endif %}
