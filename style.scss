@@ -404,21 +404,21 @@ nav {
 
 .wrapper-main {
   padding-top: 70px;
-  padding-bottom: 134px;
+  padding-bottom: 47px;
 }
 
 .wrapper-footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 64px;
+  height: 47px;
+  background-color: #DFE7EF;
 }
 
 footer {
-  padding: 12px 0;
+  padding: 4px 0;
   text-align: center;
-  background-color: #DFE7EF;
-  height: 64px;
+  height: 47px;
 }
 
 body:after {
