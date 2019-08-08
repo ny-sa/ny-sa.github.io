@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Start with something
-categories:
+categories: test
 ---
 
 ...

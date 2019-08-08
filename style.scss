@@ -30,16 +30,27 @@ body {
   height: 100%;
 }
 
-.container {
+
+.container-masthead {
   margin: 0 auto;
   max-width: 3840px;
   padding: 0 10px;
   width: 100%;
+  background-color: #DFE7EF;
+  position: fixed;
+  top: 0;
 }
 
 .container-main {
   margin: 0 auto;
   max-width: 720px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.container-footer {
+  margin: 0 auto;
+  max-width: 3840px;
   padding: 0 10px;
   width: 100%;
 }
@@ -266,7 +277,7 @@ p > img {
 
 .site-info {
   float: left;
-  margin-top: 10px;
+  margin-top: 0px;
 
   @include mobile {
     float: none;
@@ -297,7 +308,7 @@ p > img {
 
 nav {
   float: right;
-  margin-top: 33px; // @TODO: Vertically middle align
+  margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
 
@@ -322,7 +333,7 @@ nav {
   }
 }
 
-.site-avatar {
+/*.site-avatar {
   float: none;
   display: block;
   width: 70px;
@@ -339,7 +350,7 @@ nav {
   img {
     border-radius: 5px;
   }
-}
+}*/
 
 
 //
@@ -392,6 +403,7 @@ nav {
 }
 
 .wrapper-main {
+  padding-top: 70px;
   padding-bottom: 134px;
 }
 
@@ -399,13 +411,14 @@ nav {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 89px;
-  background-color: #DFE7EF;
+  height: 64px;
 }
 
 footer {
-  padding: 20px 0;
+  padding: 12px 0;
   text-align: center;
+  background-color: #DFE7EF;
+  height: 64px;
 }
 
 body:after {
@@ -416,18 +429,6 @@ body:after {
     position: absolute;
     left: 0;
     content: '';
-}
-
-#bar {
-    background: #4F575F;
-    height: 16px;
-    background-size: cover;
-    background-position: left 60%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1000;
 }
 
 .post h1{
