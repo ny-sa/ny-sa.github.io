@@ -6,7 +6,7 @@
 name: repository of myself
 
 # Name of the author
-author: niisa
+author: nysa
 
 # Short bio or description (displayed in the header)
 # description: for anything so long as it feels
@@ -45,8 +45,8 @@ google_analytics: UA-43339302-4
 
 # Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
 # Used for Sitemap.xml and your RSS feed
-url: y-san-evi.github.io
-enforce_ssl: y-san-evi.github.io
+url: ny-sa.github.io
+enforce_ssl: ny-sa.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
